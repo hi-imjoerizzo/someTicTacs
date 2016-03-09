@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset='UTSF8'>
+	<title>document</title>
+
+
+	<style>
+		canvas{
+			border: 1px solid #000;
+			position: absolute;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+
+	var canvas, ctx;
+
+	window.onload = function main() {
+
+		canvas = document.createElement('canvas');
+		canvas.width = canvas.height = 200;
+		ctx = canvas.getContext('2d');
+
+		document.body.appendChild(canvas);
+
+		init();
+		tick();
+	}
+
+	function init(){
+	} 
+
+	function tick(){
+		window.requestAnimationFrame(tick);
+		update();
+		render();
+	}
+
+	function update(){}
+	function render(){}
+
+	function tile(x,y){
+		var x = y, y = y;
+		var tile = Tile.BLANK;
+
+		this.update = function(){
+		}
+
+		this.draw = function(ctx){
+			ctx.drawImage(tile, x, y);
+		}
+	}
+
+	</script>
+</head>
+<body>
+</body>
+
+
+</html>
